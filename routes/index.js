@@ -10,15 +10,15 @@ const docs=db.get('mongocollect');
 router.get('/welcome', function(req, res, next) {
     // res.render('index', { title: 'Express' });
 
-   docs.find({},function(err,docs){
+  /* docs.find({},function(err,docs){
         if(err) console.log(err)
         else res.json(docs[0]);
-    })
+    })*/
 
-   /* docs.insert({"name":"Sweta", "age":"21","year":"2017"}, function(err,docs){
+  docs.insert({"name":"Sweta", "age":"21","year":"2017"}, function(err,docs){
         if(err) console.log(err)
         else res.send("Success");
-    })*/
+    })
 
 
 
