@@ -17,7 +17,7 @@ router.get('/welcome', function(req, res, next) {
 
   docs.insert({"name":"Sweta", "age":"21","year":"2017"}, function(err,docs){
         if(err) console.log(err)
-        else res.send("Success");
+        else res.send("Finally I am done");
     })
 
 
