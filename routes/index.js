@@ -6,12 +6,12 @@ var URL="mongodb://newone:newone@ds131742.mlab.com:31742/newdatabase";
 const db=require('monk')(URL);
 
 const docs=db.get('mongocollect');
-const  docs2=db.get('secondcollection')
+const  docs2=db.get('secondcollection');
 /* GET home page. */
 router.get('/welcome', function(req, res, next) {
     //res.render('index', { title: 'Express' });
 
-    docs.find({"id":"53g3"}, function (err, docs) {
+    docs2.find({"id":"53g3"}, function (err, docs) {
         if (err) console.log(err)
         else res.json(docs[0]);
     })
