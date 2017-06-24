@@ -11,7 +11,7 @@ const  docs2=db.get('secondcollection')
 router.get('/welcome', function(req, res, next) {
     //res.render('index', { title: 'Express' });
 
-    docs.find({}, function (err, docs) {
+    docs.find({"id":"53g3"}, function (err, docs) {
         if (err) console.log(err)
         else res.json(docs[0]);
     })
